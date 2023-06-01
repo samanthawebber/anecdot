@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to dot"), dot_path(@dot) %>
+
+  <div class="header>
+    <h1>Edit dot</h1>
+  </div>
+
+  <%= render "form", quote: @dot %>
+</main>
