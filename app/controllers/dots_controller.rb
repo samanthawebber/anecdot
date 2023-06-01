@@ -18,7 +18,7 @@ class DotsController < ApplicationController
     if @dot.save
       redirect_to dots_path, notice: "You successfully created your dot!"
     else
-      render :new, notice: "We could not create your dot due to errors."
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class DotsController < ApplicationController
     if @dot.update(dot_params)
       redirect_to dots_path, notice: "You successfully updated your dot!"
     else
-      render :edit, notice: "We could not update your dot due to errors."
+      render :edit, status: :unprocessable_entity
     end
   end
 
