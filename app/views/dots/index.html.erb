@@ -1,0 +1,8 @@
+<main class="container">
+  <div class="header">
+    <h1>Dots</h1>
+    <%= link_to "New dot", new_dot_path, class: "button is-primary" %>
+  </div>
+
+  <%= render @dots %>
+</main>

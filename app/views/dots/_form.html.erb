@@ -1,0 +1,10 @@
+<%= simple_form_for dot, html: { class: "dot form" } do | f| %>
+  <% if dot.errors.any? %>
+    <div class="error-message">
+      <%= dot.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.submit class: "button" %>
+<% end %>

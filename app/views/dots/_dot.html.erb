@@ -1,0 +1,7 @@
+<div class="dot">
+  <%= link_to dot.name, dot_path(dot) %>
+  <div class="dot__actions">
+    <%= button_to "Delete", dot_path(dot), method: :delete, class: "button is-light"%>
+    <%= link_to "Edit", edit_dot_path(dot), class: "button is-light" %>
+  </div>
+</div>
